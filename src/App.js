@@ -8,7 +8,6 @@ import Layout from "./views/Layout";
 import Cart from "./components/Cart";
 import { CartProvider } from "./context/CartContext";
 import Contacto from "./views/Contacto";
-import Home from "./views/Home";
 
 function App() {
   const [cambio, setcambio] = useState("light");
@@ -44,8 +43,8 @@ function App() {
           </label>
           <Routes>
             <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="category/:id" element={<ItemListContainer />} />
+              <Route index element={<ItemListContainer />} />
+              <Route path="category/:categoria" element={<ItemListContainer />} />
               <Route path="item/:id" element={<ItemDetailContainer />} />
               <Route path="cart" element={<Cart />} />
               <Route path="contacto" element={<Contacto />} />

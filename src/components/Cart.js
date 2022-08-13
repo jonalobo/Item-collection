@@ -14,7 +14,7 @@ function Cart() {
     <section>
       {cart.length > 0 &&
         <div className="flex mx-auto w-8/12 mt-10 mb-10 font-bold">
-          <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center shadow-xl">ITEMS: {totalItems}</div>
+          <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center shadow-xl">ITEMS IN CART: {totalItems}</div>
           <div className="divider divider-horizontal"></div>
           <div className="grid h-20 flex-grow card bg-base-300 rounded-box place-items-center shadow-xl">TOTAL ${totalPrice}</div>
         </div>}
@@ -31,7 +31,7 @@ function Cart() {
       </div>
 
       <div className='mt-10 text-center'>
-        {cart.length > 0 ? <button className="btn btn-primary btn-block w-48" onClick={clearAll}>VACIAR</button>
+        {cart.length > 0 ? <button className="btn btn-primary btn-block w-48" onClick={clearAll}>CLEAR ALL</button>
           :
           <Link to="../">
             <h1>Carrito vacio</h1><button className="btn btn-primary btn-block w-48" onClick={clearAll}>COMPRAR PRODUCTOS</button></Link>}
